@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewMaster Cafe System - Transform Your Cafe Operations</title>
+    <link rel="stylesheet" href="global/css/style.css">
+    <link rel="stylesheet" href="global/css/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="landing-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-coffee brand-icon"></i>
+                <span class="brand-text">BrewMaster</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-element coffee-bean">☕</div>
+                <div class="floating-element coffee-bean">🫘</div>
+                <div class="floating-element coffee-bean">☕</div>
+                <div class="floating-element coffee-bean">🫘</div>
+                <div class="floating-element coffee-bean">☕</div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Welcome to</span>
+                    <span class="title-highlight">BrewMaster Cafe</span>
+                    <span class="title-line">Your Digital Coffee Experience</span>
+                </h1>
+                <p class="hero-subtitle">
+                    🌟 Order your favorite drinks & food online, skip the wait, and enjoy fresh coffee 
+                    prepared just for you. From quick espresso shots to gourmet meals - we've got it all!
+                </p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" onclick="openPortal('customer')">
+                        <i class="fas fa-coffee"></i>
+                        Order Now
+                    </button>
+                    <button class="cta-button secondary" onclick="showLoginModal()">
+                        <i class="fas fa-users"></i>
+                        All Portals
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-screen">
+                        <div class="screen-header">
+                            <div class="screen-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                        </div>
+                        <div class="screen-content">
+                            <div class="animated-chart">
+                                <div class="chart-bar" style="height: 60%; animation-delay: 0.2s;"></div>
+                                <div class="chart-bar" style="height: 80%; animation-delay: 0.4s;"></div>
+                                <div class="chart-bar" style="height: 45%; animation-delay: 0.6s;"></div>
+                                <div class="chart-bar" style="height: 90%; animation-delay: 0.8s;"></div>
+                                <div class="chart-bar" style="height: 70%; animation-delay: 1s;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🚀 Choose Your Experience</h2>
+                <p class="section-subtitle">Whether you're ordering, working, or managing - we have the perfect portal for you!</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card customer-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon customer-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>🍽️ Order Your Favorites</h3>
+                    <p>Browse our delicious menu, customize your order, and track it in real-time. Perfect for dine-in, takeaway, or delivery!</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">🥐 Fresh Menu</span>
+                        <span class="highlight-tag">⚡ Quick Order</span>
+                        <span class="highlight-tag">📱 Mobile Friendly</span>
+                    </div>
+                    <button class="feature-btn customer-btn" onclick="openPortal('customer')">
+                        <i class="fas fa-utensils"></i> Start Ordering
+                    </button>
+                </div>
+
+                <div class="feature-card staff-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon staff-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>👨‍💼 Staff Portal</h3>
+                    <p>Efficient order processing, payment handling, and customer service tools for front-of-house staff.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">💳 Payments</span>
+                        <span class="highlight-tag">📊 Analytics</span>
+                        <span class="highlight-tag">🎯 Efficiency</span>
+                    </div>
+                    <button class="feature-btn staff-btn" onclick="openPortal('staff')">
+                        <i class="fas fa-sign-in-alt"></i> Staff Login
+                    </button>
+                </div>
+
+                <div class="feature-card kitchen-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-icon kitchen-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>👨‍🍳 Kitchen Portal</h3>
+                    <p>Specialized interface for kitchen staff to manage food preparation, track orders, and ensure quality service.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">🍳 Order Queue</span>
+                        <span class="highlight-tag">⏱️ Timing</span>
+                        <span class="highlight-tag">✅ Quality</span>
+                    </div>
+                    <button class="feature-btn kitchen-btn" onclick="openPortal('kitchen')">
+                        <i class="fas fa-chef-hat"></i> Kitchen Login
+                    </button>
+                </div>
+
+                <div class="feature-card admin-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon admin-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>⚙️ Management Hub</h3>
+                    <p>Complete business control with inventory management, staff oversight, sales analytics, and system administration.</p>
+                    <div class="feature-highlights">
+                        <span class="highlight-tag">📈 Analytics</span>
+                        <span class="highlight-tag">📦 Inventory</span>
+                        <span class="highlight-tag">👥 Staff</span>
+                    </div>
+                    <button class="feature-btn admin-btn" onclick="openPortal('admin')">
+                        <i class="fas fa-cog"></i> Admin Panel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">Orders Processed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Menu Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-label">Hours Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">Uptime %</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Choose Your Portal</h3>
+                <button class="modal-close" onclick="closeLoginModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div class="portal-options">
+                    <div class="portal-option customer-portal" onclick="openPortal('customer')">
+                        <div class="portal-icon customer">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h4>🍽️ Customer</h4>
+                        <p>Browse menu & place orders</p>
+                        <span class="portal-badge">Most Popular</span>
+                    </div>
+                    
+                    <div class="portal-option staff-portal" onclick="openPortal('staff')">
+                        <div class="portal-icon staff">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>👨‍💼 Staff</h4>
+                        <p>Order management & customer service</p>
+                    </div>
+
+                    <div class="portal-option kitchen-portal" onclick="openPortal('kitchen')">
+                        <div class="portal-icon kitchen">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h4>👨‍🍳 Kitchen Staff</h4>
+                        <p>Food preparation & order fulfillment</p>
+                    </div>
+                    
+                    <div class="portal-option admin-portal" onclick="openPortal('admin')">
+                        <div class="portal-icon admin">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4>⚙️ Administrator</h4>
+                        <p>Full system management & analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show login modal
+        function showLoginModal() {
+            document.getElementById('loginModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close login modal
+        function closeLoginModal() {
+            document.getElementById('loginModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Open specific portal
+        function openPortal(type) {
+            const routes = {
+                customer: 'customer/customer_login.php',
+                staff: 'staff/staff_login.php',
+                kitchen: 'kitchen/kitchen_login.php',
+                admin: 'admin/admin_login.php'
+            };
+            window.location.href = routes[type];
+        }
+
+        // Smooth scroll to features
+        function scrollToFeatures() {
+            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Animated counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+
+        // Intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stats-section')) {
+                        animateCounters();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe stats section
+        document.addEventListener('DOMContentLoaded', () => {
+            observer.observe(document.querySelector('.stats-section'));
+        });
+
+        // Close modal on outside click
+        document.getElementById('loginModal').addEventListener('click', (e) => {
+            if (e.target.id === 'loginModal') {
+                closeLoginModal();
+            }
+        });
+    </script>
+</body>
+</html>
